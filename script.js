@@ -1,4 +1,4 @@
 'use strict';
-function testing {
+console.log(document.querySelector('.message').textContent);
 
-}
+document.querySelector('.message').textContent = "Correct number!"
