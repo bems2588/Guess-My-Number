@@ -6,6 +6,9 @@
 // document.querySelector('.number').textContent =  13;
 // document.querySelector('.score').textContent =  20;
 // document.querySelector('.guess').value =  23;
+const number = Math.random();
+
+console.log(number);
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -14,8 +17,6 @@ document.querySelector('.check').addEventListener('click', function () {
 
   if (!guess) {
     document.querySelector('.message').textContent = 'No number 😫!'
-  } else {
-    document.querySelector('.message').textContent = "Correct number!";
-  }
+  } 
 
 })
