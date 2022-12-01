@@ -50,3 +50,9 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 })
+
+document.querySelector('.btn again').addEventListener('click', function () {
+  if (score === 0) {
+    document.querySelector('body').style.backgroundColor = 'black';
+  }
+})
