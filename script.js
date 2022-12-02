@@ -28,6 +28,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').style.width = '30rem';
     if (score > highScore) {
       highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
     }
     //When number is too high
   } else if (guess > secretNumber) {
