@@ -39,7 +39,8 @@ document.querySelector('.check').addEventListener('click', function () {
 
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = guess > secretNumber ? 'Too High!' : 'Too Low Low Low Low';
+      // document.querySelector('.message').textContent = guess > secretNumber ? 'Too High!' : 'Too Low Low Low Low';
+      displayMessage(guess > secretNumber ? 'Too High!' : 'Too Low Low Low Low');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
