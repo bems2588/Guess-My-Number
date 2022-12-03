@@ -30,29 +30,42 @@ document.querySelector('.check').addEventListener('click', function () {
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
     }
-    //When number is too high
-  } else if (guess > secretNumber) {
+    //When guess is wrong 
+
+  } else if (quess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent =
-        'too high!';
+      document.querySelector('.message').textContent = guess > secretNumber ? 'Too High!' : 'Too Low Low Low Low';
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      document.querySelector('.message').textContent = 'You lost you loser!';
-      document.querySelector('.score').textContent = 0;
+      document.querySelector('.message').textContent = 'You lost you loser!'
+      document.querySelector('.score') = 0;
     }
 
-    //When number is too low  
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = 'Too Low Low Low Low';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = 'You lost you loser!';
-      document.querySelector('.score').textContent = 0;
-    }
   }
+  //When number is too high
+  //   } else if (guess > secretNumber) {
+  //     if (score > 1) {
+  //       document.querySelector('.message').textContent =
+  //         'too high!';
+  //       score--;
+  //       document.querySelector('.score').textContent = score;
+  //     } else {
+  //       document.querySelector('.message').textContent = 'You lost you loser!';
+  //       document.querySelector('.score').textContent = 0;
+  //     }
+
+  //     //When number is too low  
+  //   } else if (guess < secretNumber) {
+  //     if (score > 1) {
+  //       document.querySelector('.message').textContent = 'Too Low Low Low Low';
+  //       score--;
+  //       document.querySelector('.score').textContent = score;
+  //     } else {
+  //       document.querySelector('.message').textContent = 'You lost you loser!';
+  //       document.querySelector('.score').textContent = 0;
+  //     }
+  //   }
 })
 
 document.querySelector('.again').addEventListener('click', function () {
